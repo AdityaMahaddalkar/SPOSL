@@ -1,0 +1,88 @@
+import java.util.*;
+
+class Job{
+	private String name;
+	
+	public Job(String s){
+		
+		name = new String(s);
+		System.out.println("Added Job : " + name);
+	
+	}
+	
+	public void display(){
+		
+		//Print job name
+		System.out.println("Job executing : " + name);
+	
+	}
+}
+
+class Scheduler{
+	LinkedList<Job> q;
+	
+	public Scheduler(){
+		LinkedList<Job> q = new LinkedList<Job>();
+	}
+	
+	public boolean addJob(String name){
+		try{
+			// Add a new job to the queue
+			q.add(new Job(name));
+
+		}
+		catch(Exception e){
+			
+			e.printStackTrace();
+			return false;
+		}
+		return true;
+	}
+	
+	public boolean executeJob(){
+		try{
+			// Remove job from head and display the name
+			q.remove().display();
+			
+		}
+		catch(Exception e){
+			
+			return false;
+		}
+		return true;
+	}
+}
+
+public class mainFile {
+
+	public static void main(String args[]){
+		
+		Scanner sc = new Scanner(System.in);
+		Scheduler sh = new Scheduler();
+		
+		while(true){
+			
+			System.out.println("1.Add job\n2.Execute job\n> ");
+			int option = sc.nextInt();
+			
+			if(option == 1){
+				
+				System.out.println("Enter name: ");
+				boolean out = sh.addJob(sc.next());
+				if(out == false){
+					
+					System.out.println("Error");
+				}
+			}
+			else if(option == 2){
+				
+				boolean out = sh.executeJob();
+				if(out == false){
+					System.out.println("Job queue empty");
+				}
+			}
+			
+		}
+	}
+	
+}

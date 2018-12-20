@@ -1,0 +1,83 @@
+import java.util.*;
+
+class Job{
+	public String name;
+	public int priority;
+	public Job(String s, int priority){
+		
+		this.priority = priority;
+		name = new String(s);
+		System.out.println("Added Job : " + name + " priority : " + priority);
+	
+	}
+	
+	public void display(){
+		
+		//Print job name
+		System.out.println("Job executing : " + name + " priority : " + priority);
+	
+	}
+}
+
+class Scheduler{
+	
+	PriorityQueue<Job> pq;
+	
+	public Scheduler(){
+		
+		Comparator<Job> JobComp = new Comparator<Job>(){
+
+			public int compare(Job o1, Job o2) {
+				return (o1.priority - o2.priority);
+			}
+		};
+		
+		pq = new PriorityQueue<Job>(JobComp);
+	}
+	
+	public boolean addJob(String name, int priority){
+		
+		try{
+			pq.add(new Job(name, priority));
+			
+		}
+		catch(Exception e){
+			
+			return false;
+		}
+		
+		return true;
+	}
+	
+	public boolean execute(){
+		
+		try{
+			
+			pq.remove().display();
+			
+		}
+		catch(Exception e){
+			
+			return false;
+		}
+		
+		return true;
+	}
+	
+}
+
+public class mainFile {
+	
+	public static void main(String args[]){
+		
+		Scheduler sh = new Scheduler();
+		Scanner sc = new Scanner(System.in);
+		
+		while(true){
+			
+			System.out.println("1.Add job\n2.Execute job\n> ");
+			
+		}
+	}
+
+}

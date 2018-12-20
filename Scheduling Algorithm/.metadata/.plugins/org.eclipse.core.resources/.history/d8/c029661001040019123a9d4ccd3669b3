@@ -1,0 +1,15 @@
+import java.util.*;
+
+
+public class mainFile {
+
+	static int n, ar[], pid[], bt[], ct[], ta[], wt[];
+
+	public static void main(String args[]){
+		
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter number of processes: ");
+		n = sc.nextInt();
+		
+	}
+}

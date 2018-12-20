@@ -1,0 +1,19 @@
+import java.util.*;
+
+class Job{
+	public int pid, at, bt;
+	
+	public Job(int pid, at, bt){
+		this.pid = pid;
+		this.at = at;
+		this.bt = bt;
+	}
+}
+
+public class mainFile {
+
+	public static void main(String args[]){
+		
+	}
+	
+}

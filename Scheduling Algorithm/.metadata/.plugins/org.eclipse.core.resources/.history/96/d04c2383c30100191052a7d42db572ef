@@ -1,0 +1,29 @@
+import java.util.*;
+
+class Job implements Comparable{
+	public int pid, at, bt;
+	
+	public Job(int pid, int at, int bt){
+		this.pid = pid;
+		this.at = at;
+		this.bt = bt;
+	}
+
+	public int compareTo(Object o) {
+		Job j = (Job) o;
+		return at - j.at;
+	}
+	
+	public void display(){
+		System.out.println(pid + "\t" + at + "\t" + bt);
+	}
+	
+}
+
+public class mainFile {
+
+	public static void main(String args[]){
+		
+	}
+	
+}

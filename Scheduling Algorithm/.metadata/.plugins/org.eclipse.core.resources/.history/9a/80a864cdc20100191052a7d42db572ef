@@ -1,0 +1,25 @@
+import java.util.*;
+
+class Job implements Comparable{
+	public int pid, at, bt;
+	
+	public Job(int pid, int at, int bt){
+		this.pid = pid;
+		this.at = at;
+		this.bt = bt;
+	}
+	
+	@Override
+	public boolean equals(Job j){
+		return 
+	}
+	
+}
+
+public class mainFile {
+
+	public static void main(String args[]){
+		
+	}
+	
+}
