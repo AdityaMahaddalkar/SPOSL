@@ -1,4 +1,18 @@
+import java.awt.BorderLayout;
 import java.util.*;
+
+import javax.swing.*;
+
+import org.jfree.chart.ChartFactory;
+import org.jfree.chart.ChartPanel;
+import org.jfree.chart.JFreeChart;
+import org.jfree.data.category.IntervalCategoryDataset;
+import org.jfree.data.gantt.Task;
+import org.jfree.data.gantt.TaskSeries;
+import org.jfree.data.gantt.TaskSeriesCollection;
+import org.jfree.data.time.SimpleTimePeriod;
+import org.jfree.ui.ApplicationFrame;
+import org.jfree.ui.RefineryUtilities;
 
 
 public class mainFile {
@@ -65,9 +79,9 @@ public class mainFile {
 					ct[i] = ct[i-1] + bt[i];
 			}
 			ta[i] = ct[i] - ar[i] ;          // turn around time= completion time- arrival time
-			wt[i] = ta[i] - bt[i] ;          // waiting time= turn around time- burst time
-			avgwt = wt[i] ;               // total waiting time
-			avgta += ta[i] ;               // total turn around time
+			wt[i] = ta[i] - bt[i] ;         // waiting time= turn around time- burst time
+			avgwt += wt[i] ;               // total waiting time
+			avgta += ta[i] ;              // total turn around time
 		}
 		
 		System.out.println("\npid  arrival  brust  complete turn waiting");
@@ -77,7 +91,53 @@ public class mainFile {
 		}
 		sc.close();
 		System.out.println("\naverage waiting time: "+ (avgwt/n));     // printing average waiting time.
-		System.out.println("average turnaround time:"+(avgta/n));    // printing average turn around time.
+		System.out.println("\naverage turnaround time:"+(avgta/n));    // printing average turn around time.
 	
+		
+		// Gantt Chart
+		
+		// Define task series
+		
+		final TaskSeries s1 = new TaskSeries("Processes");
+		
+		for(int i = 0;i < n;i ++){
+ 			if(i > 0)
+ 				s1.add(new Task(Integer.toString(pid[i]), new SimpleTimePeriod(ct[i-1], ct[i])));
+ 			else
+ 				s1.add(new Task(Integer.toString(pid[i]), new SimpleTimePeriod(ar[i], ct[i])));
+ 		}
+		
+		final TaskSeriesCollection collection = new TaskSeriesCollection();
+		collection.add(s1);
+		
+		// Make a dataset
+		final IntervalCategoryDataset dataset = collection;
+		
+		// Create a chart
+		final JFreeChart chart = ChartFactory.createGanttChart(
+				"Process Chart",	//chart name
+				"Process",	//domain axis label
+				"Time",		//range axis label
+				dataset,	//data
+				true,	//Include legend
+				true,	//Tooltips
+				false	//urls
+				);
+		
+		// Create a panel
+		
+		final ChartPanel chartPanel = new ChartPanel(chart);
+		chartPanel.setPreferredSize(new java.awt.Dimension(800,800));
+		
+		// Add panel to the frame
+		JFrame frame = new JFrame();
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setLayout(new BorderLayout());
+		frame.setContentPane(chartPanel);
+		frame.setSize(900, 900);
+		//frame.pack();
+		frame.setVisible(true);
 	}
 }
+
+// I/P: 3 2 19 3 9 8 10 

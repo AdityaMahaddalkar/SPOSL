@@ -5322,3 +5322,393 @@ org.tigris.subversion.subclipse.core.SVNException: Provided SVN information does
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
 !SUBENTRY 1 org.tigris.subversion.subclipse.core 4 4 2018-12-20 09:19:02.089
 !MESSAGE Provided SVN information does not match that on disk for project 'RoundRobinPreemptive'.
+!SESSION 2018-12-24 10:15:51.314 -----------------------------------------------
+eclipse.buildId=4.3.2.3fc20
+java.version=1.8.0_65
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.debug.ui 4 0 2018-12-24 10:16:15.909
+!MESSAGE Tab group extension: org.eclipse.cdt.launch.applicationProfileLaunchTabGroup for type org.eclipse.cdt.launch.applicationLaunchType for the [profile] mode has been replaced by extension: org.eclipse.cdt.launch.applicationProfileLaunchTabGroup
+!SESSION 2018-12-24 10:49:59.910 -----------------------------------------------
+eclipse.buildId=4.3.2.3fc20
+java.version=1.8.0_65
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.debug.ui 4 0 2018-12-24 10:58:29.453
+!MESSAGE Tab group extension: org.eclipse.cdt.launch.applicationProfileLaunchTabGroup for type org.eclipse.cdt.launch.applicationLaunchType for the [profile] mode has been replaced by extension: org.eclipse.cdt.launch.applicationProfileLaunchTabGroup
+
+!ENTRY org.eclipse.jface 2 0 2018-12-24 10:59:44.959
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2018-12-24 10:59:44.959
+!MESSAGE A conflict occurred for CTRL+D:
+Binding(CTRL+D,
+	ParameterizedCommand(Command(org.eclipse.debug.ui.commands.eof,EOF,
+		Send end of file,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@7fef75e1,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.debug.ui.console,,,system)
+Binding(CTRL+D,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.text.delete.line,Delete Line,
+		Delete a line of text,
+		Category(org.eclipse.ui.category.textEditor,Text Editing,Text Editing Commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@2174fda1,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.textEditorScope,,,system)
+
+!ENTRY org.eclipse.help.base 4 0 2018-12-24 11:35:41.962
+!MESSAGE Help index declared, but missing for plugin org.eclipse.dstore.doc.isv.
+
+!ENTRY org.eclipse.help.base 4 0 2018-12-24 11:35:42.059
+!MESSAGE Help index declared, but missing for plugin org.eclipse.rse.doc.isv.
+
+!ENTRY org.eclipse.help.base 4 0 2018-12-24 11:35:42.060
+!MESSAGE Help index declared, but missing for plugin org.eclipse.rse.doc.user.
+
+!ENTRY org.eclipse.help.base 4 0 2018-12-24 11:35:42.666
+!MESSAGE An error occured while pre-processing help XHTML document "/org.eclipse.rse.doc.user/tasks/tbegindstore.html" for search indexing
+!STACK 0
+org.xml.sax.SAXParseException; lineNumber: 34; columnNumber: 8; XML document structures must start and end within the same entity.
+	at com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:257)
+	at com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:339)
+	at org.eclipse.help.internal.dynamic.DocumentReader.read(DocumentReader.java:56)
+	at org.eclipse.help.internal.dynamic.XMLProcessor.process(XMLProcessor.java:49)
+	at org.eclipse.help.internal.xhtml.DynamicXHTMLProcessor.process(DynamicXHTMLProcessor.java:76)
+	at org.eclipse.help.internal.search.XHTMLSearchParticipant.preprocess(XHTMLSearchParticipant.java:106)
+	at org.eclipse.help.search.SearchParticipantXML.addDocument(SearchParticipantXML.java:296)
+	at org.eclipse.help.internal.search.HTMLSearchParticipant.addDocument(HTMLSearchParticipant.java:51)
+	at org.eclipse.help.internal.search.SearchIndex.addDocument(SearchIndex.java:230)
+	at org.eclipse.help.internal.search.IndexingOperation.addDocuments(IndexingOperation.java:252)
+	at org.eclipse.help.internal.search.IndexingOperation.addNewDocuments(IndexingOperation.java:159)
+	at org.eclipse.help.internal.search.IndexingOperation.execute(IndexingOperation.java:106)
+	at org.eclipse.help.internal.search.LocalSearchManager.updateIndex(LocalSearchManager.java:628)
+	at org.eclipse.help.internal.search.LocalSearchManager.ensureIndexUpdated(LocalSearchManager.java:602)
+	at org.eclipse.help.internal.search.LocalSearchManager.search(LocalSearchManager.java:547)
+	at org.eclipse.help.internal.search.SearchManager.searchLocal(SearchManager.java:103)
+	at org.eclipse.help.internal.search.SearchManager.search(SearchManager.java:94)
+	at org.eclipse.help.internal.search.SearchProgressMonitor$2.run(SearchProgressMonitor.java:162)
+	at java.lang.Thread.run(Thread.java:745)
+
+!ENTRY org.eclipse.help.base 4 0 2018-12-24 11:35:43.323
+!MESSAGE An error occured while pre-processing help XHTML document "/org.eclipse.rse.doc.user/tasks/tusingefs.html" for search indexing
+!STACK 0
+org.xml.sax.SAXParseException; lineNumber: 43; columnNumber: 1; XML document structures must start and end within the same entity.
+	at com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:257)
+	at com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:339)
+	at org.eclipse.help.internal.dynamic.DocumentReader.read(DocumentReader.java:56)
+	at org.eclipse.help.internal.dynamic.XMLProcessor.process(XMLProcessor.java:49)
+	at org.eclipse.help.internal.xhtml.DynamicXHTMLProcessor.process(DynamicXHTMLProcessor.java:76)
+	at org.eclipse.help.internal.search.XHTMLSearchParticipant.preprocess(XHTMLSearchParticipant.java:106)
+	at org.eclipse.help.search.SearchParticipantXML.addDocument(SearchParticipantXML.java:296)
+	at org.eclipse.help.internal.search.HTMLSearchParticipant.addDocument(HTMLSearchParticipant.java:51)
+	at org.eclipse.help.internal.search.SearchIndex.addDocument(SearchIndex.java:230)
+	at org.eclipse.help.internal.search.IndexingOperation.addDocuments(IndexingOperation.java:252)
+	at org.eclipse.help.internal.search.IndexingOperation.addNewDocuments(IndexingOperation.java:159)
+	at org.eclipse.help.internal.search.IndexingOperation.execute(IndexingOperation.java:106)
+	at org.eclipse.help.internal.search.LocalSearchManager.updateIndex(LocalSearchManager.java:628)
+	at org.eclipse.help.internal.search.LocalSearchManager.ensureIndexUpdated(LocalSearchManager.java:602)
+	at org.eclipse.help.internal.search.LocalSearchManager.search(LocalSearchManager.java:547)
+	at org.eclipse.help.internal.search.SearchManager.searchLocal(SearchManager.java:103)
+	at org.eclipse.help.internal.search.SearchManager.search(SearchManager.java:94)
+	at org.eclipse.help.internal.search.SearchProgressMonitor$2.run(SearchProgressMonitor.java:162)
+	at java.lang.Thread.run(Thread.java:745)
+
+!ENTRY org.eclipse.help.base 4 4 2018-12-24 11:35:44.323
+!MESSAGE Help documentation could not be indexed completely.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2018-12-24 11:35:44.323
+!MESSAGE Help document /org.eclipse.rse.doc.isv/reference/extension-points/org_eclipse_rse_ui_newConnectionWizards.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2018-12-24 11:35:44.323
+!MESSAGE Help document /org.eclipse.rse.doc.isv/reference/api/org/eclipse/rse/core/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2018-12-24 11:35:44.323
+!MESSAGE Help document /org.eclipse.rse.doc.isv/reference/api/org/eclipse/rse/logging/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2018-12-24 11:35:44.323
+!MESSAGE Exception occurred while adding document /org.eclipse.rse.doc.user/tasks/tbegindstore.html to index.
+!STACK 0
+java.io.IOException: Stream closed
+	at java.util.zip.InflaterInputStream.ensureOpen(InflaterInputStream.java:67)
+	at java.util.zip.InflaterInputStream.read(InflaterInputStream.java:121)
+	at org.eclipse.osgi.baseadaptor.bundlefile.ZipBundleEntry$ZipBundleEntryInputStream.read(ZipBundleEntry.java:153)
+	at com.sun.org.apache.xerces.internal.impl.XMLEntityManager$RewindableInputStream.read(XMLEntityManager.java:2899)
+	at com.sun.org.apache.xerces.internal.impl.XMLEntityManager.setupCurrentEntity(XMLEntityManager.java:674)
+	at com.sun.org.apache.xerces.internal.impl.XMLVersionDetector.determineDocVersion(XMLVersionDetector.java:189)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:812)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:777)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1213)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:643)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl.parse(SAXParserImpl.java:327)
+	at javax.xml.parsers.SAXParser.parse(SAXParser.java:195)
+	at org.eclipse.help.search.SearchParticipantXML.addDocument(SearchParticipantXML.java:297)
+	at org.eclipse.help.internal.search.HTMLSearchParticipant.addDocument(HTMLSearchParticipant.java:51)
+	at org.eclipse.help.internal.search.SearchIndex.addDocument(SearchIndex.java:230)
+	at org.eclipse.help.internal.search.IndexingOperation.addDocuments(IndexingOperation.java:252)
+	at org.eclipse.help.internal.search.IndexingOperation.addNewDocuments(IndexingOperation.java:159)
+	at org.eclipse.help.internal.search.IndexingOperation.execute(IndexingOperation.java:106)
+	at org.eclipse.help.internal.search.LocalSearchManager.updateIndex(LocalSearchManager.java:628)
+	at org.eclipse.help.internal.search.LocalSearchManager.ensureIndexUpdated(LocalSearchManager.java:602)
+	at org.eclipse.help.internal.search.LocalSearchManager.search(LocalSearchManager.java:547)
+	at org.eclipse.help.internal.search.SearchManager.searchLocal(SearchManager.java:103)
+	at org.eclipse.help.internal.search.SearchManager.search(SearchManager.java:94)
+	at org.eclipse.help.internal.search.SearchProgressMonitor$2.run(SearchProgressMonitor.java:162)
+	at java.lang.Thread.run(Thread.java:745)
+!SUBENTRY 1 org.eclipse.help.base 4 4 2018-12-24 11:35:44.324
+!MESSAGE Help document /org.eclipse.rse.doc.isv/reference/api/org/eclipse/rse/ui/operations/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2018-12-24 11:35:44.324
+!MESSAGE Help document /org.eclipse.rse.doc.isv/reference/api/org/eclipse/rse/services/shells/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2018-12-24 11:35:44.324
+!MESSAGE Help document /org.eclipse.rse.doc.isv/reference/api/org/eclipse/rse/subsystems/shells/ssh/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2018-12-24 11:35:44.324
+!MESSAGE Help document /org.eclipse.rse.doc.isv/reference/api/org/eclipse/rse/subsystems/files/core/subsystems/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2018-12-24 11:35:44.324
+!MESSAGE Help document /org.eclipse.rse.doc.isv/reference/api/org/eclipse/rse/services/files/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2018-12-24 11:35:44.324
+!MESSAGE Help document /org.eclipse.rse.doc.isv/reference/api/org/eclipse/rse/services/dstore/util/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2018-12-24 11:35:44.324
+!MESSAGE Help document /org.eclipse.dstore.doc.isv/reference/api/overview-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2018-12-24 11:35:44.324
+!MESSAGE Help document /org.eclipse.rse.doc.isv/reference/extension-points/org_eclipse_rse_subsystems_files_ftp_ftpListingParsers.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2018-12-24 11:35:44.324
+!MESSAGE Help document /org.eclipse.rse.doc.isv/reference/api/org/eclipse/rse/subsystems/terminals/ssh/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2018-12-24 11:35:44.324
+!MESSAGE Help document /org.eclipse.rse.doc.isv/reference/api/org/eclipse/rse/subsystems/shells/dstore/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2018-12-24 11:35:44.324
+!MESSAGE Help document /org.eclipse.rse.doc.isv/reference/extension-points/org_eclipse_rse_core_persistenceProviders.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2018-12-24 11:35:44.324
+!MESSAGE Help document /org.eclipse.rse.doc.isv/reference/api/org/eclipse/rse/services/dstore/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2018-12-24 11:35:44.324
+!MESSAGE Help document /org.eclipse.dstore.doc.isv/reference/api/org/eclipse/dstore/core/client/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2018-12-24 11:35:44.324
+!MESSAGE Help document /org.eclipse.dstore.doc.isv/reference/api/org/eclipse/dstore/core/miners/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2018-12-24 11:35:44.324
+!MESSAGE Help document /org.eclipse.rse.doc.isv/reference/extension-points/org_eclipse_rse_services_archivehandlers.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2018-12-24 11:35:44.324
+!MESSAGE Help document /org.eclipse.rse.doc.isv/reference/api/org/eclipse/rse/ui/widgets/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2018-12-24 11:35:44.324
+!MESSAGE Help document /org.eclipse.rse.doc.isv/reference/api/org/eclipse/rse/subsystems/files/core/util/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2018-12-24 11:35:44.324
+!MESSAGE Help document /org.eclipse.rse.doc.isv/reference/api/org/eclipse/rse/subsystems/shells/core/subsystems/servicesubsystem/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2018-12-24 11:35:44.324
+!MESSAGE Help document /org.eclipse.rse.doc.isv/reference/api/org/eclipse/rse/subsystems/files/ssh/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2018-12-24 11:35:44.324
+!MESSAGE Help document /org.eclipse.rse.doc.isv/reference/extension-points/org_eclipse_rse_services_codePageConverters.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2018-12-24 11:35:44.324
+!MESSAGE Help document /org.eclipse.rse.doc.isv/reference/extension-points/org_eclipse_rse_core_modelInitializers.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2018-12-24 11:35:44.324
+!MESSAGE Help document /org.eclipse.rse.doc.isv/reference/api/org/eclipse/rse/subsystems/processes/core/subsystem/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2018-12-24 11:35:44.324
+!MESSAGE Help document /org.eclipse.rse.doc.isv/reference/api/org/eclipse/rse/subsystems/processes/local/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2018-12-24 11:35:44.324
+!MESSAGE Help document /org.eclipse.rse.doc.isv/reference/api/org/eclipse/rse/subsystems/processes/core/subsystem/impl/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2018-12-24 11:35:44.324
+!MESSAGE Help document /org.eclipse.rse.doc.isv/reference/api/org/eclipse/rse/shells/ui/view/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2018-12-24 11:35:44.324
+!MESSAGE Help document /org.eclipse.rse.doc.isv/reference/api/org/eclipse/rse/services/processes/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2018-12-24 11:35:44.324
+!MESSAGE Help document /org.eclipse.rse.doc.isv/reference/api/org/eclipse/rse/processes/ui/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2018-12-24 11:35:44.324
+!MESSAGE Help document /org.eclipse.rse.doc.isv/reference/api/org/eclipse/rse/files/ui/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2018-12-24 11:35:44.324
+!MESSAGE Help document /org.eclipse.rse.doc.isv/reference/extension-points/org_eclipse_rse_subsystems_files_core_remoteFileTypes.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2018-12-24 11:35:44.324
+!MESSAGE Help document /org.eclipse.rse.doc.isv/reference/api/org/eclipse/rse/services/search/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2018-12-24 11:35:44.324
+!MESSAGE Help document /org.eclipse.rse.doc.isv/reference/api/org/eclipse/rse/ui/dialogs/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2018-12-24 11:35:44.324
+!MESSAGE Help document /org.eclipse.rse.doc.isv/reference/api/org/eclipse/rse/ui/filters/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2018-12-24 11:35:44.324
+!MESSAGE Help document /org.eclipse.dstore.doc.isv/reference/api/org/eclipse/dstore/core/server/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2018-12-24 11:35:44.324
+!MESSAGE Help document /org.eclipse.rse.doc.isv/reference/api/org/eclipse/rse/persistence/dom/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2018-12-24 11:35:44.324
+!MESSAGE Help document /org.eclipse.rse.doc.isv/reference/extension-points/org_eclipse_rse_core_subsystemConfigurations.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2018-12-24 11:35:44.324
+!MESSAGE Help document /org.eclipse.rse.doc.isv/reference/api/org/eclipse/rse/ui/filters/actions/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2018-12-24 11:35:44.324
+!MESSAGE Help document /org.eclipse.rse.doc.isv/reference/api/org/eclipse/rse/core/events/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2018-12-24 11:35:44.324
+!MESSAGE Help document /org.eclipse.rse.doc.isv/reference/api/org/eclipse/rse/subsystems/files/local/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2018-12-24 11:35:44.324
+!MESSAGE Help document /org.eclipse.rse.doc.isv/reference/api/org/eclipse/rse/services/clientserver/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2018-12-24 11:35:44.324
+!MESSAGE Help document /org.eclipse.rse.doc.isv/reference/api/org/eclipse/rse/files/ui/widgets/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2018-12-24 11:35:44.324
+!MESSAGE Help document /org.eclipse.rse.doc.isv/reference/api/org/eclipse/rse/core/comm/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2018-12-24 11:35:44.324
+!MESSAGE Exception occurred while adding document /org.eclipse.rse.doc.user/tasks/tusingefs.html to index.
+!STACK 0
+java.io.IOException: Stream closed
+	at java.util.zip.InflaterInputStream.ensureOpen(InflaterInputStream.java:67)
+	at java.util.zip.InflaterInputStream.read(InflaterInputStream.java:121)
+	at org.eclipse.osgi.baseadaptor.bundlefile.ZipBundleEntry$ZipBundleEntryInputStream.read(ZipBundleEntry.java:153)
+	at com.sun.org.apache.xerces.internal.impl.XMLEntityManager$RewindableInputStream.read(XMLEntityManager.java:2899)
+	at com.sun.org.apache.xerces.internal.impl.XMLEntityManager.setupCurrentEntity(XMLEntityManager.java:674)
+	at com.sun.org.apache.xerces.internal.impl.XMLVersionDetector.determineDocVersion(XMLVersionDetector.java:189)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:812)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:777)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1213)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:643)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl.parse(SAXParserImpl.java:327)
+	at javax.xml.parsers.SAXParser.parse(SAXParser.java:195)
+	at org.eclipse.help.search.SearchParticipantXML.addDocument(SearchParticipantXML.java:297)
+	at org.eclipse.help.internal.search.HTMLSearchParticipant.addDocument(HTMLSearchParticipant.java:51)
+	at org.eclipse.help.internal.search.SearchIndex.addDocument(SearchIndex.java:230)
+	at org.eclipse.help.internal.search.IndexingOperation.addDocuments(IndexingOperation.java:252)
+	at org.eclipse.help.internal.search.IndexingOperation.addNewDocuments(IndexingOperation.java:159)
+	at org.eclipse.help.internal.search.IndexingOperation.execute(IndexingOperation.java:106)
+	at org.eclipse.help.internal.search.LocalSearchManager.updateIndex(LocalSearchManager.java:628)
+	at org.eclipse.help.internal.search.LocalSearchManager.ensureIndexUpdated(LocalSearchManager.java:602)
+	at org.eclipse.help.internal.search.LocalSearchManager.search(LocalSearchManager.java:547)
+	at org.eclipse.help.internal.search.SearchManager.searchLocal(SearchManager.java:103)
+	at org.eclipse.help.internal.search.SearchManager.search(SearchManager.java:94)
+	at org.eclipse.help.internal.search.SearchProgressMonitor$2.run(SearchProgressMonitor.java:162)
+	at java.lang.Thread.run(Thread.java:745)
+!SUBENTRY 1 org.eclipse.help.base 4 4 2018-12-24 11:35:44.324
+!MESSAGE Help document /org.eclipse.rse.doc.isv/reference/api/org/eclipse/rse/services/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2018-12-24 11:35:44.324
+!MESSAGE Help document /org.eclipse.rse.doc.isv/reference/api/org/eclipse/rse/dstore/universal/miners/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2018-12-24 11:35:44.324
+!MESSAGE Help document /org.eclipse.rse.doc.isv/reference/api/org/eclipse/rse/services/clientserver/processes/handlers/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2018-12-24 11:35:44.324
+!MESSAGE Help document /org.eclipse.rse.doc.isv/reference/api/org/eclipse/rse/subsystems/files/core/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2018-12-24 11:35:44.324
+!MESSAGE Help document /org.eclipse.rse.doc.isv/reference/api/org/eclipse/rse/subsystems/files/core/servicesubsystem/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2018-12-24 11:35:44.324
+!MESSAGE Help document /org.eclipse.dstore.doc.isv/reference/api/org/eclipse/dstore/core/model/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2018-12-24 11:35:44.324
+!MESSAGE Help document /org.eclipse.rse.doc.isv/reference/api/org/eclipse/rse/services/clientserver/processes/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2018-12-24 11:35:44.324
+!MESSAGE Help document /org.eclipse.rse.doc.isv/reference/api/org/eclipse/rse/services/clientserver/java/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2018-12-24 11:35:44.324
+!MESSAGE Help document /org.eclipse.rse.doc.isv/reference/api/org/eclipse/rse/ui/wizards/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2018-12-24 11:35:44.324
+!MESSAGE Help document /org.eclipse.rse.doc.isv/reference/api/org/eclipse/rse/core/filters/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2018-12-24 11:35:44.324
+!MESSAGE Help document /org.eclipse.rse.doc.isv/reference/api/org/eclipse/rse/ui/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2018-12-24 11:35:44.324
+!MESSAGE Help document /org.eclipse.rse.doc.isv/reference/extension-points/org_eclipse_rse_core_systemTypeProviders.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2018-12-24 11:35:44.324
+!MESSAGE Help document /org.eclipse.rse.doc.isv/reference/api/org/eclipse/rse/services/terminals/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2018-12-24 11:35:44.324
+!MESSAGE Help document /org.eclipse.rse.doc.isv/reference/extension-points/org_eclipse_rse_core_systemTypes.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2018-12-24 11:35:44.324
+!MESSAGE Help document /org.eclipse.rse.doc.isv/reference/api/org/eclipse/rse/subsystems/shells/core/subsystems/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2018-12-24 11:35:44.324
+!MESSAGE Help document /org.eclipse.rse.doc.isv/reference/api/org/eclipse/rse/ui/open/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2018-12-24 11:35:44.324
+!MESSAGE Help document /org.eclipse.rse.doc.isv/reference/api/org/eclipse/rse/files/ui/dialogs/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2018-12-24 11:35:44.324
+!MESSAGE Help document /org.eclipse.rse.doc.isv/reference/extension-points/org_eclipse_rse_core_keystoreProviders.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2018-12-24 11:35:44.324
+!MESSAGE Help document /org.eclipse.rse.doc.isv/reference/api/org/eclipse/rse/subsystems/terminals/core/elements/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2018-12-24 11:35:44.324
+!MESSAGE Help document /org.eclipse.rse.doc.isv/reference/api/org/eclipse/rse/subsystems/processes/shell/linux/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2018-12-24 11:35:44.324
+!MESSAGE Help document /org.eclipse.rse.doc.isv/reference/extension-points/org_eclipse_rse_ui_mountPathMappers.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2018-12-24 11:35:44.324
+!MESSAGE Help document /org.eclipse.rse.doc.isv/reference/api/org/eclipse/rse/subsystems/processes/servicesubsystem/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2018-12-24 11:35:44.324
+!MESSAGE Help document /org.eclipse.rse.doc.isv/reference/api/org/eclipse/rse/core/subsystems/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2018-12-24 11:35:44.324
+!MESSAGE Help document /org.eclipse.rse.doc.isv/reference/api/org/eclipse/rse/ui/propertypages/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2018-12-24 11:35:44.324
+!MESSAGE Help document /org.eclipse.rse.doc.isv/reference/api/org/eclipse/rse/ui/actions/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2018-12-24 11:35:44.324
+!MESSAGE Help document /org.eclipse.dstore.doc.isv/reference/api/org/eclipse/dstore/core/util/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2018-12-24 11:35:44.324
+!MESSAGE Help document /org.eclipse.rse.doc.isv/reference/api/org/eclipse/rse/files/ui/resources/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2018-12-24 11:35:44.325
+!MESSAGE Help document /org.eclipse.rse.doc.isv/reference/api/org/eclipse/rse/core/model/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2018-12-24 11:35:44.325
+!MESSAGE Help document /org.eclipse.rse.doc.isv/reference/api/org/eclipse/rse/subsystems/files/ftp/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2018-12-24 11:35:44.325
+!MESSAGE Help document /org.eclipse.rse.doc.isv/reference/api/org/eclipse/rse/subsystems/processes/core/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2018-12-24 11:35:44.325
+!MESSAGE Help document /org.eclipse.rse.doc.isv/reference/api/org/eclipse/rse/subsystems/shells/core/model/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2018-12-24 11:35:44.325
+!MESSAGE Help document /org.eclipse.rse.doc.isv/reference/api/org/eclipse/rse/subsystems/processes/dstore/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2018-12-24 11:35:44.325
+!MESSAGE Help document /org.eclipse.rse.doc.isv/reference/api/org/eclipse/rse/services/clientserver/archiveutils/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2018-12-24 11:35:44.325
+!MESSAGE Help document /org.eclipse.rse.doc.isv/reference/api/org/eclipse/rse/persistence/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2018-12-24 11:35:44.325
+!MESSAGE Help document /org.eclipse.rse.doc.isv/reference/api/org/eclipse/rse/ui/filters/dialogs/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2018-12-24 11:35:44.325
+!MESSAGE Help document /org.eclipse.rse.doc.isv/reference/api/org/eclipse/rse/subsystems/files/dstore/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2018-12-24 11:35:44.325
+!MESSAGE Help document /org.eclipse.rse.doc.isv/reference/api/org/eclipse/rse/subsystems/shells/local/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2018-12-24 11:35:44.325
+!MESSAGE Help document /org.eclipse.rse.doc.isv/reference/api/org/eclipse/rse/ui/view/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2018-12-24 11:35:44.325
+!MESSAGE Help document /org.eclipse.rse.doc.isv/reference/api/overview-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2018-12-24 11:35:44.325
+!MESSAGE Help document /org.eclipse.rse.doc.isv/reference/api/org/eclipse/rse/ui/subsystems/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2018-12-24 11:35:44.325
+!MESSAGE Help document /org.eclipse.rse.doc.isv/reference/api/org/eclipse/rse/services/clientserver/messages/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2018-12-24 11:35:44.325
+!MESSAGE Help document /org.eclipse.rse.doc.isv/reference/api/org/eclipse/rse/ui/widgets/services/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2018-12-24 11:35:44.325
+!MESSAGE Help document /org.eclipse.rse.doc.isv/reference/api/org/eclipse/rse/files/ui/actions/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2018-12-24 11:35:44.325
+!MESSAGE Help document /org.eclipse.rse.doc.isv/reference/api/org/eclipse/rse/shells/ui/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2018-12-24 11:35:44.325
+!MESSAGE Help document /org.eclipse.rse.doc.isv/reference/api/org/eclipse/rse/core/references/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2018-12-24 11:35:44.325
+!MESSAGE Help document /org.eclipse.rse.doc.isv/reference/api/org/eclipse/rse/connectorservice/dstore/util/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2018-12-24 11:35:44.325
+!MESSAGE Help document /org.eclipse.rse.doc.isv/reference/api/org/eclipse/rse/connectorservice/dstore/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2018-12-24 11:35:44.325
+!MESSAGE Help document /org.eclipse.rse.doc.isv/reference/api/org/eclipse/rse/ui/validators/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2018-12-24 11:35:44.325
+!MESSAGE Help document /org.eclipse.rse.doc.isv/reference/api/org/eclipse/rse/ui/model/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2018-12-24 11:35:44.325
+!MESSAGE Help document /org.eclipse.rse.doc.isv/reference/api/org/eclipse/rse/subsystems/files/core/model/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2018-12-24 11:35:44.325
+!MESSAGE Help document /org.eclipse.rse.doc.isv/reference/api/org/eclipse/rse/subsystems/shells/telnet/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2018-12-24 11:35:44.325
+!MESSAGE Help document /org.eclipse.rse.doc.isv/reference/api/org/eclipse/rse/files/ui/compare/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2018-12-24 11:35:44.325
+!MESSAGE Help document /org.eclipse.rse.doc.isv/reference/api/org/eclipse/rse/ui/messages/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2018-12-24 11:35:44.325
+!MESSAGE Help document /org.eclipse.rse.doc.isv/reference/api/org/eclipse/rse/subsystems/terminals/core/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2018-12-24 11:35:44.325
+!MESSAGE Help document /org.eclipse.rse.doc.isv/reference/api/org/eclipse/rse/services/clientserver/search/package-summary.html cannot be opened.
+!SESSION 2018-12-27 08:01:47.304 -----------------------------------------------
+eclipse.buildId=4.3.2.3fc20
+java.version=1.8.0_65
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.core.resources 2 10035 2018-12-27 08:02:07.813
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.debug.ui 4 0 2018-12-27 08:33:19.145
+!MESSAGE Tab group extension: org.eclipse.cdt.launch.applicationProfileLaunchTabGroup for type org.eclipse.cdt.launch.applicationLaunchType for the [profile] mode has been replaced by extension: org.eclipse.cdt.launch.applicationProfileLaunchTabGroup
+
+!ENTRY org.eclipse.jface 2 0 2018-12-27 08:34:14.182
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2018-12-27 08:34:14.182
+!MESSAGE A conflict occurred for CTRL+D:
+Binding(CTRL+D,
+	ParameterizedCommand(Command(org.eclipse.debug.ui.commands.eof,EOF,
+		Send end of file,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@136efc8f,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.debug.ui.console,,,system)
+Binding(CTRL+D,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.text.delete.line,Delete Line,
+		Delete a line of text,
+		Category(org.eclipse.ui.category.textEditor,Text Editing,Text Editing Commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@15210484,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.textEditorScope,,,system)

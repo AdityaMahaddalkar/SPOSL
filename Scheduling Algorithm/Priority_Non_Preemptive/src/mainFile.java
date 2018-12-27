@@ -1,4 +1,16 @@
-import java.util.*;
+import java.awt.BorderLayout;
+import java.util.Scanner;
+
+import javax.swing.JFrame;
+
+import org.jfree.chart.ChartFactory;
+import org.jfree.chart.ChartPanel;
+import org.jfree.chart.JFreeChart;
+import org.jfree.data.category.IntervalCategoryDataset;
+import org.jfree.data.gantt.Task;
+import org.jfree.data.gantt.TaskSeries;
+import org.jfree.data.gantt.TaskSeriesCollection;
+import org.jfree.data.time.SimpleTimePeriod;
 
 public class mainFile {
 	
@@ -11,7 +23,7 @@ public class mainFile {
 		n = sc.nextInt();
 			
 		int pid[] = new int[n]; // process id
-		int priority[] = new int [n];// priority
+		int priority[] = new int[n];// priority
 		int ar[] = new int[n];     // arrival times
 		int bt[] = new int[n];     // burst or execution times
 		int ct[] = new int[n];     // completion times
@@ -109,6 +121,49 @@ public class mainFile {
 		sc.close();
 		System.out.println("\naverage waiting time: "+ (avgwt/n));     // printing average waiting time.
 		System.out.println("average turnaround time:"+(avgta/n));    // printing average turn around time.
-
+		
+		
+		// Gantt Chart
+		
+ 		// Define task series
+ 		
+ 		final TaskSeries s1 = new TaskSeries("Processes");
+ 		
+ 		for(int i = 0;i < n;i ++){
+ 			if(i > 0)
+ 				s1.add(new Task(Integer.toString(i), new SimpleTimePeriod(ct[i-1], ct[i])));
+ 			else
+ 				s1.add(new Task(Integer.toString(i), new SimpleTimePeriod(ar[i], ct[i])));
+ 		}
+ 		
+ 		final TaskSeriesCollection collection = new TaskSeriesCollection();
+ 		collection.add(s1);
+ 		
+ 		// Make a dataset
+ 		final IntervalCategoryDataset dataset = collection;
+ 		
+ 		// Create a chart
+ 		final JFreeChart chart = ChartFactory.createGanttChart(
+ 				"Process Chart",	//chart name
+ 				"Process",	//domain axis label
+ 				"Time",		//range axis label
+ 				dataset,	//data
+ 				true,	//Include legend
+ 				true,	//Tooltips
+ 				false	//urls
+ 				);
+ 		
+ 		// Create a panel
+ 		
+ 		final ChartPanel chartPanel = new ChartPanel(chart);
+ 		chartPanel.setPreferredSize(new java.awt.Dimension(500,500));
+ 		
+ 		// Add panel to the frame
+ 		JFrame frame = new JFrame();
+ 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setLayout(new BorderLayout());
+ 		frame.setContentPane(chartPanel);
+ 		frame.pack();
+ 		frame.setVisible(true);
 	}
 }
