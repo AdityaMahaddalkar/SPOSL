@@ -21,7 +21,9 @@ int main(){
 			break;
 		case 4:
 		    //TODO: exec family function
-		    execv("./EXEC", NULL);
+		    const char *path = "./EXEC";
+		    const char *args = NULL;
+		    execv(path, args);
 		    break;
 		case 5:
 		    system("wait");
