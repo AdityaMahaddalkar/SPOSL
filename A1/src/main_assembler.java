@@ -74,11 +74,23 @@ public class main_assembler {
 			}
 		}
 		
+		//Littab
+		
 		print("\n\nLiteral table: \n");
 		
 		if(!literals.isEmpty()) {
 			for(int i = 0;i < literals.size();i ++) {
 				print(literals.get(i) + "\t" + litAddr.get(i));
+			}
+		}
+		
+		//Pooltab
+		
+		print("\n\nPool table: \n");
+		
+		if(!pooltab.isEmpty()){
+			for(int i = 0;i < pooltab.size();i ++){
+				print(pooltab.get(i));
 			}
 		}
 	}
@@ -139,10 +151,12 @@ public class main_assembler {
 	
 	private void parse_line(String[] words, PrintWriter pr) throws Exception {
 		// Case for if the opcode is not EQU or ORIGIN
-		if(!words[1].equalsIgnoreCase("") && !words[1].matches("(EQU|ORIGIN)")) {
+		if(!words[1].equalsIgnoreCase("") /*&& !words[1].matches("(EQU|ORIGIN)")*/) {
 			System.out.print(parse_opcode(words[1]) + "\t");
 			pr.print(parse_opcode(words[1]) + "\t");
 		}
+		/*Variant I
+		
 		if(!words[1].matches("(EQU|ORIGIN)")) {
 			for(int i = 2;i < words.length;i ++) {
 				System.out.print(parse_operand(words[i]) + "\t");
@@ -166,6 +180,15 @@ public class main_assembler {
 			pr.println();
 			
 		}
+		*/
+		
+		/* Variant II */
+		for(int i = 2;i < words.length;i ++) {
+			System.out.print(words[i] + "\t");
+			pr.print(words[i] + "\t");
+		}
+		System.out.println();
+		pr.println();
 		
 		
 	}
@@ -181,6 +204,7 @@ public class main_assembler {
 				throw new Exception("Invalid code");
 			}
 			lc = Integer.parseInt(words[2]);
+			parse_line(words, pr);
 		}
 		
 		//Main loop to parse the file
@@ -198,18 +222,16 @@ public class main_assembler {
 				if(words[1].equalsIgnoreCase("EQU")) {
 					String[] scan_line = words[2].split("\\+");
 					String symbol = scan_line[0];
-					int ptr = symtab.indexOf(symbol);
-					int address = Integer.parseInt(scan_line[1]) +  ((Integer)symAddr.get(ptr)).intValue();
-					
-					// If symtab contains the address of symbol
-					if(symtab.contains(symbol)) {
+					if(symtab.contains(symbol)){
+						int ptr = symtab.indexOf(symbol);
+						int address = Integer.parseInt(scan_line[1]) +  ((Integer)symAddr.get(ptr)).intValue();
 						symtab.add(words[0]);
 						symAddr.add(new Integer(address));
 					}
 					//else add -1 for the time
 					else {
 						symtab.add(words[0]); 
-						symAddr.add(new Integer(-1));
+						symAddr.add(words[2]);
 					}
 				}
 				
@@ -253,18 +275,47 @@ public class main_assembler {
 				lc += 1;
 			}
 			
+			parse_line(words, pr);
+			
 		}
 		br.close();
-		
-		// For generating the intermediate code
-		
-		br = new BufferedReader(new FileReader("code"));
-		
-		while((line = br.readLine()) != null) {
-			words = line.split("\t");
-			parse_line(words, pr);
-		}
 		pr.close();
+		
+		
+		//TODO: Filling all the forward references
+		//Filling all the forward references
+		
+		for(int i = 0;i < symtab.size();i ++){
+			if(symAddr.get(i) instanceof String){
+				if(((String)symAddr.get(i)).matches("[a-zA-Z][+-]?[1-9]?")){
+					String to_parse = (String)symAddr.get(i);
+					
+					if(to_parse.contains("+")){
+						String p_words[] = to_parse.split("\\+");
+						int ptr = symtab.indexOf(p_words[0]);
+						int addr = ((Integer)symAddr.get(ptr)).intValue() + Integer.parseInt(p_words[1]);
+						
+						symAddr.set(i, new Integer(addr));
+					}
+					
+					else if(to_parse.contains("-")){
+						String p_words[] = to_parse.split("\\-");
+						int ptr = symtab.indexOf(p_words[0]);
+						int addr = ((Integer)symAddr.get(ptr)).intValue() - Integer.parseInt(p_words[1]);
+						
+						symAddr.set(i, new Integer(addr));
+					}
+					
+					else {
+						throw new Exception("Same address for multiple literals");
+					}
+					
+				}
+				else{
+					throw new Exception("Invalid operands");
+				}
+			}
+		}
 		
 	}
 	
