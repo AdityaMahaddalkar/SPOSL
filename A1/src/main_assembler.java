@@ -11,6 +11,8 @@ import java.util.HashSet;
 import java.util.WeakHashMap;
 
 //TODO: Error handling for assembly code
+//TODO: Duplicate operands handling
+//TODO: Pool table verification
 
 public class main_assembler {
 	
@@ -151,7 +153,7 @@ public class main_assembler {
 	
 	private void parse_line(String[] words, PrintWriter pr) throws Exception {
 		// Case for if the opcode is not EQU or ORIGIN
-		if(!words[1].equalsIgnoreCase("") /*&& !words[1].matches("(EQU|ORIGIN)")*/) {
+		if(!words[1].equalsIgnoreCase("")) {
 			System.out.print(parse_opcode(words[1]) + "\t");
 			pr.print(parse_opcode(words[1]) + "\t");
 		}
