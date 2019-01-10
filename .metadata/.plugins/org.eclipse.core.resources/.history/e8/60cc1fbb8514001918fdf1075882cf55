@@ -1,0 +1,7 @@
+
+public class pass2 {
+	public pass2(){
+		registers.add("AREG,");
+		registers.add("BREG,");
+	}
+}

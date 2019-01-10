@@ -1,0 +1,37 @@
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.HashMap;
+
+
+public class pass2 {
+	ArrayList registers;
+	HashMap symtab, littab;
+	
+	public pass2(){
+		registers.add("AREG,");
+		registers.add("BREG,");
+	}
+	
+	public void read_tables() throws IOException{
+		//Add symbols
+		BufferedReader br = new BufferedReader(new FileReader("../A1/symbol"));
+		String line;
+		while((line = br.readLine()) != null){
+			String [] words = line.split("\t");
+			symtab.put(words[0], words[1]);
+		}
+		br.close();
+		
+		//Add literals
+		br = new BufferedReader(new FileReader("../A1/literal"));
+		
+		while((line = br.readLine()) != null){
+			String [] words = line.split("\t");
+			littab.put(words[0], words[1]);
+		}
+		
+	}
+}

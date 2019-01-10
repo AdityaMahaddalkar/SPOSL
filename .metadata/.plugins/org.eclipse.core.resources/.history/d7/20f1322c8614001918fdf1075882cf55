@@ -1,0 +1,19 @@
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.util.ArrayList;
+
+
+public class pass2 {
+	ArrayList registers;
+	HashMap symtab = 
+	
+	public pass2(){
+		registers.add("AREG,");
+		registers.add("BREG,");
+	}
+	
+	public void read_tables() throws FileNotFoundException{
+		BufferedReader br = new BufferedReader(new FileReader("../A1/symbol"));
+	}
+}

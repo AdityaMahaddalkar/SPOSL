@@ -1,0 +1,9 @@
+
+public class pass2 {
+	ArrayList registers;
+	
+	public pass2(){
+		registers.add("AREG,");
+		registers.add("BREG,");
+	}
+}
