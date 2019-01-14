@@ -1,5 +1,4 @@
 import java.io.BufferedReader;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -20,6 +19,8 @@ public class pass2 {
 		registers.add("BREG,");
 		lc = 0;
 	}
+	
+	public void print(Object o){ System.out.println(o); }
 	
 	public void read_tables() throws IOException{
 		//Add symbols
@@ -52,6 +53,9 @@ public class pass2 {
 			if(line.split("\t")[0].equalsIgnoreCase("(AD,01)")){
 				lc = Integer.parseInt(line.split("\t")[1]);
 			}
+			else{
+				print("Error");
+			}
 		}
 		
 		
@@ -61,7 +65,7 @@ public class pass2 {
 			String sign = "+";
 			String opcode;
 			String reg;
-			int mem_add;
+			int mem_add, lit_addr;
 			
 			// Get opcode
 			if(words.length >= 2){
@@ -76,10 +80,13 @@ public class pass2 {
 						lc += 1;
 					}
 					else if(words[2].matches("='[0-9]*'")){
-						
+						reg = Integer.toString(registers.indexOf(words[1])+1);
+						lit_addr = Integer.parseInt((String) littab.get(words[2].split("=")[1]));
+						pr.write(lc + "\t" + sign + "\t" + opcode + "\t" + reg + "\t" + lit_addr);
+						lc += 1;
 					}
 					else{
-						reg = Integer.toString(registers.indexOf(words[1].split(",")));
+						reg = Integer.toString(registers.indexOf(words[1])+1);
 						if(symtab.containsKey(words[2]))
 							mem_add = Integer.parseInt((String) symtab.get(words[2]));
 						else if(littab.containsKey(words[2]))
@@ -89,19 +96,22 @@ public class pass2 {
 						pr.write(lc + "\t" + sign + "\t" + opcode + "\t" + reg + "\t" + mem_add);
 						lc += 1;
 					}
+					pr.write("\n");
 				}
 				//If it is DS
 				else if(words[0].split(",")[0].split("\\(")[1].equalsIgnoreCase("DS")){
 					opcode = words[0].split(",")[1].split("\\)")[0];
 					if(opcode.equalsIgnoreCase("01")){
-						pr.write(lc + "\t" + sign + "\t" + "00\t0\t" + words[1]);
+						pr.write(lc + "\t" + sign + "\t" + "00\t0\t" + words[1].split("'")[1]);
 						lc += 1;
+						pr.write("\n");
 					}
 					else{
 						int temp;
 						for(int i = 0;i < Integer.parseInt(words[1]);i ++){
 							temp = lc + i;
-							pr.write(temp);
+							//pr.write(temp);
+							//pr.write("\n");
 						}
 						lc += Integer.parseInt(words[1]);
 						
@@ -118,9 +128,10 @@ public class pass2 {
 					}
 				}
 			}
-			pr.write("\n");
+			
 		}
 		pr.close();
+		br.close();
 	}
 	
 	public static void main(String args[]) throws IOException{
