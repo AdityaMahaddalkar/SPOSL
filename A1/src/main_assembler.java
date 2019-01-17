@@ -5,9 +5,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 
-//TODO: Error handling for assembly code
-//TODO: Duplicate operands handling
-//TODO: Pool table verification
 
 public class main_assembler {
 	
