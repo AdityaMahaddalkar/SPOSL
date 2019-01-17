@@ -1,0 +1,18 @@
+import java.util.ArrayList;
+import java.util.Hashtable;
+
+class Triplet{
+	String name;
+	Integer args, line;
+	
+	public Triplet(String s, Integer a, Integer l){
+		name = s;
+		args = a;
+		line = l;
+	}
+}
+
+public class MacroPass1 {
+	Hashtable<Integer, String> MDT;
+	ArrayList<Triplet> MNT;
+}

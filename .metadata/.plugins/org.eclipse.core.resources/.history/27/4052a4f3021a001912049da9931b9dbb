@@ -1,0 +1,4 @@
+	LOAD	a
+	STORE	b
+	MACRO	M1	&x,	&y,	&z
+	

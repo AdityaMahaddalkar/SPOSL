@@ -1,0 +1,25 @@
+import java.util.ArrayList;
+import java.util.Hashtable;
+
+class Triplet{
+	// To store MNT macro name, number of parameters and line number
+	public String name;
+	public Integer args, line;
+	
+	public Triplet(String s, Integer a, Integer l){
+		name = s;
+		args = a;
+		line = l;
+	}
+	
+}
+
+class arguments{
+	// For actual vs positional and actual vs formal parameters
+	
+}
+
+public class MacroPass1 {
+	Hashtable<Integer, String> MDT;
+	ArrayList<Triplet> MNT;
+}

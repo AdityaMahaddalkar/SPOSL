@@ -1,0 +1,7 @@
+import java.util.Hashtable;
+
+
+public class MacroPass1 {
+	Hashtable MDT;
+	Hashtable MNT;
+}
