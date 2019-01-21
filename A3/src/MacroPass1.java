@@ -3,7 +3,6 @@ import java.io.FileReader;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Hashtable;
 import java.util.Map.Entry;
 
 //TODO: Nesting macros
@@ -96,6 +95,9 @@ public class MacroPass1 {
 		//TODO: To write to a intermediate file
 		
 		PrintWriter pr = new PrintWriter("inter_macro", "utf-8");
+		PrintWriter mnt_writer = new PrintWriter("MNT", "utf-8");
+		PrintWriter mdt_writer = new PrintWriter("MDT", "utf-8");
+		
 		boolean macro_flag = false;
 		String line;
 		String current_macro_name = null;
@@ -168,6 +170,7 @@ public class MacroPass1 {
 			else if(!macro_flag){
 				//print(line);
 				
+				pr.write(line + "\n");
 				//If any macro name occurs
 				if(arg_list.containsKey(words[1])){
 					
@@ -206,6 +209,20 @@ public class MacroPass1 {
 			
 			
 		}
+		
+		//Write to mnt_writer and mdt_writer
+		
+		for(Triplet tr : MNT){
+			mnt_writer.write(tr.name + "\t" + tr.args + "\t" + tr.line + "\n");
+		}
+		
+		for(Pair pair : MDT){
+			mdt_writer.write(pair.line_no + "\t" + pair.line + "\n");
+		}
+		
+		pr.close();
+		mnt_writer.close();
+		mdt_writer.close();
 		
 	}
 	
