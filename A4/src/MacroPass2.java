@@ -74,6 +74,7 @@ public class MacroPass2{
 			int line = ret_macro_line(macro_call);
 			for(int i = line; i < MDT.size();i ++){
 				if(MDT.get(i).line.equals("MEND")){
+					expansion.deleteCharAt(expansion.lastIndexOf("\n"));
 					break;
 				}
 				expansion.append(MDT.get(i).line + "\n");
