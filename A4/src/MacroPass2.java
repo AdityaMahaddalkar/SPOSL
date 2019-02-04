@@ -1,7 +1,6 @@
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.PrintWriter;
-import java.nio.file.StandardOpenOption;
 import java.util.ArrayList;
 
 
@@ -191,7 +190,7 @@ public class MacroPass2{
 		
 		MacroPass2 mp2 = new MacroPass2();
 		mp2.fill_MNT_MDT();
-		mp2.print_MDT_MNT();
+		//TestCase: mp2.print_MDT_MNT();
 		mp2.parseIC(new BufferedReader(new FileReader("../A3/inter_macro")));
 	}
 }
