@@ -1,0 +1,59 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
+
+public class BankersAlgorithm {
+	ArrayList available;
+	int max[][], allocation[][], need[][];
+	
+	private void print(Object obj){ System.out.println(obj);}
+	
+	private int[][] subtract(int a[][], int b[][]) throws Exception{
+		
+		int difference[][] = new int[a.length][a[0].length];
+		
+		try{
+			if(a.length != b.length || a[0].length != b[0].length){
+				throw new Exception("Size invalid");
+			}
+		}
+		finally{
+			
+		}
+		
+		for(int i = 0;i < a.length;i ++){
+			for(int j = 0;j < a[0].length; j++){
+				difference[i][j] = a[i][j] - b[i][j];
+			}
+		}
+		return difference;
+	}
+	
+	public BankersAlgorithm(int processes, int resources){
+		
+		available = new ArrayList();
+		
+		for(int iter=0;iter < resources;iter++){
+			available.add(new Integer(resources+1));
+		}
+		
+		max = new int[processes][resources];
+		allocation = new int[processes][resources];
+		need = new int[processes][resources];
+		
+	}
+	
+	public void fillMatrices(){
+		Scanner sc = new Scanner(System.in);
+		
+		// Input all the max matrix elements
+		print("Enter max matrix(row major):");
+		
+		for(int i = 0;i < max.length;i ++){
+			for(int j = 0;j < max[0].length; j++){
+				max[i][j] = sc.nextInt();
+			}
+		}
+		
+	}
+}

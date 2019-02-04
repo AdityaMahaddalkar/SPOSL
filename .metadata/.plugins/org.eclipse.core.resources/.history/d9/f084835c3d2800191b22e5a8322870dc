@@ -1,0 +1,11 @@
+import java.util.ArrayList;
+
+
+public class BankersAlgorithm {
+	ArrayList available;
+	int max[][], allocation[][], need[][];
+	
+	public BankersAlgorithm(int processes, int resources){
+		
+	}
+}

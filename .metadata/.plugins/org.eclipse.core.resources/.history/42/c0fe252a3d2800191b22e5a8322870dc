@@ -1,0 +1,5 @@
+
+public class BankersAlgorithm {
+	ArrayList available;
+	int max[][], allocation[][], need[][];
+}

@@ -1,0 +1,27 @@
+import java.util.ArrayList;
+
+
+public class BankersAlgorithm {
+	ArrayList available;
+	int max[][], allocation[][], need[][];
+	
+	private void print(Object obj){ System.out.println(obj);}
+	
+	private subtract(int a[][], int b[][]){
+		
+	}
+	
+	public BankersAlgorithm(int processes, int resources){
+		
+		available = new ArrayList();
+		
+		for(int iter=0;iter < resources;iter++){
+			available.add(new Integer(resources+1));
+		}
+		
+		max = new int[processes][resources];
+		allocation = new int[processes][resources];
+		need = new int[processes][resources];
+		
+	}
+}

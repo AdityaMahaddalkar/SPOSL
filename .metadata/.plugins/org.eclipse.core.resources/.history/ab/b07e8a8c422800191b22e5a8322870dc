@@ -1,0 +1,140 @@
+/* Reference: https://www.geeksforgeeks.org/operating-system-bankers-algorithm/
+ *
+ */
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+
+public class BankersAlgorithm {
+	ArrayList available;
+	int max[][], allocated[][], need[][];
+	
+	private void print(Object obj){ System.out.println(obj);}
+	
+	public void printTables(){
+		// Print available
+		for(Object obj: available){
+			print(obj);
+		}
+		
+		// Print max
+		for(int i = 0;i < max.length;i ++){
+			for(int j = 0; j < max[0].length; j++){
+				System.out.print(max[i][j] + " ");
+			}
+			System.out.print("\n");
+		}
+		
+		//Print allocated
+		for(int i = 0;i < allocated.length;i ++){
+			for(int j = 0; j < allocated[0].length; j++){
+				System.out.print(allocated[i][j] + " ");
+			}
+			System.out.print("\n");
+		}
+		
+		// Print need
+		for(int i = 0;i < need.length;i ++){
+			for(int j = 0; j < need[0].length; j++){
+				System.out.print(need[i][j] + " ");
+			}
+			System.out.print("\n");
+		}
+	}
+	
+	private int[] add(int a[], int b[]) throws Exception{
+		int sum[] = new int[a.length];
+		
+		try{
+			if(a.length != b.length){
+				throw new Exception("Size error");
+			}
+		}
+		finally{
+			
+		}
+		
+		for(int i = 0;i < a.length;i ++){
+			sum[i] = a[i] + b[i];
+		}
+		
+		return sum;
+	}
+	
+	private int[][] subtract(int a[][], int b[][]) throws Exception{
+		
+		int difference[][] = new int[a.length][a[0].length];
+		
+		try{
+			if(a.length != b.length || a[0].length != b[0].length){
+				throw new Exception("Size invalid");
+			}
+		}
+		finally{
+			
+		}
+		
+		for(int i = 0;i < a.length;i ++){
+			for(int j = 0;j < a[0].length; j++){
+				difference[i][j] = a[i][j] - b[i][j];
+			}
+		}
+		return difference;
+	}
+	
+	public BankersAlgorithm(int processes, int resources){
+		
+		available = new ArrayList();
+		
+		for(int iter=0;iter < resources;iter++){
+			available.add(new Integer(resources%5));
+		}
+		
+		max = new int[processes][resources];
+		allocated = new int[processes][resources];
+		need = new int[processes][resources];
+		
+	}
+	
+	public void fillMatrices() throws Exception{
+		Scanner sc = new Scanner(System.in);
+		
+		// Input all the max matrix elements
+		print("Enter max matrix(row major):");
+		
+		for(int i = 0;i < max.length;i ++){
+			for(int j = 0;j < max[0].length; j++){
+				max[i][j] = sc.nextInt();
+			}
+		}
+		
+		//Input all the allocated elements
+		print("Enter allocated matrix(row major):");
+		
+		for(int i = 0;i < allocated.length;i ++){
+			for(int j = 0;j < allocated[i].length; j++){
+				allocated[i][j] = sc.nextInt();
+			}
+		}
+		
+		// Fill the need matrix;
+		need = subtract(max, allocated);
+	}
+	
+	public boolean safetyAlgorithm(){
+		
+		// Create work and finish array
+		int work[] = new int[available.size()];
+		int finish[] = new int[max.length];
+		
+		for(int i = 0;i < finish.length; i++){
+			
+			if(finish[i] == 0 && needLtWork(need[i], work)){
+				
+			}
+		}
+		
+		return true;
+	}
+}
