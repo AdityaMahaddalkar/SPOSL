@@ -147,7 +147,7 @@ public class MacroPass1 {
 				// with formal arguments
 				else{
 					
-					// Get the actual vs formal arguments table for current macro
+					// Get the formal vs positional arguments table for current macro
 					HashMap<String, Integer> cur_avsp = arg_list.get(current_macro_name).ret_avsp();
 					
 					//Loop through the avsp to replace each actual argument with positional argument
@@ -230,6 +230,6 @@ public class MacroPass1 {
 		
 		MacroPass1 mp = new MacroPass1();
 		mp.parse_file(new BufferedReader(new FileReader("macro")));
-		mp.print_tables();
+		
 	}
 }
