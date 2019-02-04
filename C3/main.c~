@@ -20,7 +20,6 @@ int main(){
 		    //TODO: join function
 			break;
 		case 4:
-		    //TODO: exec family function
 		    execv("./EXEC", NULL);
 		    break;
 		case 5:
