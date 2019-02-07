@@ -1,0 +1,37 @@
+These are some popular vi commands:
+
+    n dd will delete n lines starting from the current cursor position.
+
+    n dw will delete n words at the right side of the cursor.
+
+    x will delete the character on which the cursor is positioned
+
+    :n moves to line n of the file.
+
+    :w will save (write) the file
+
+    :q will exit the editor.
+
+    :q! forces the exit when you want to quit a file containing unsaved changes.
+
+    :wq will save and exit
+
+    :w newfile will save the text to newfile.
+
+    :wq! overrides read-only permission (if you have the permission to override permissions, for instance when you are using the root account.
+
+    /astring will search the string in the file and position the cursor on the first match below its position.
+
+    / will perform the same search again, moving the cursor to the next match.
+
+    :1, $s/word/anotherword/g will replace word with anotherword throughout the file.
+
+    yy will copy a block of text.
+
+    n p will paste it n times.
+
+    :recover will recover a file after an unexpected interruption.
+
+6.2.2.3. Commands that switch the editor to insert mode
+
+    a will append: it moves the cursor one position to the right before switching to insert mode
