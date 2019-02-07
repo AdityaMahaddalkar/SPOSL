@@ -7,7 +7,7 @@ keyword	for|while|if|else|else if|{datatype}
 identifier	[_a-zA-Z]+[_a-zA-Z0-9]*
 operator	\+|-|\*|\\|<|>|<=|>=|!=
 seperator	\,|;
-token	{datatype}|{keyword}|{identifier}|{operator}|{seperator}
+
 %%
 {token}	{tokens++;}
 %%
