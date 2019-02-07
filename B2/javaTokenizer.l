@@ -14,15 +14,17 @@ assignmentOperator	\+=|-=|\*=|\/=|%=|<<=|>>=|>>>=|&=|\|=|\^=|=
 loopKeywords	for|while|do
 conditionalKeywords	if|else\sif|else
 exceptionKeywords	try|catch|finally
-datatypes	int|float|char|boolean|void|null
+datatypes	int|float|char|boolean|void
+nullKeyword	null
 booleanKeywords	true|false
 accessSpecifier	public|private|protected
 classTokens	class|static|final|abstract|implements|extends|interface|new
-importToken	import
+importToken	^(import)
 string	"[a-zA-Z0-9\?\*!@#\$&]*"
 comment	(\/\/.*|\/\*(.|\n)*\*\/)
 %%
 {comment}	{printf("(Comment:%s)", yytext);}
+{nullKeyword}	{printf("(Null:%s)", yytext);}
 {importToken}	{printf("(Import token:%s)", yytext);}
 {unaryOperator}	{printf("(Unary Operator:%s)", yytext);}
 {binaryOperator}	{printf("(Binary Operator:%s)", yytext);}
@@ -37,9 +39,9 @@ comment	(\/\/.*|\/\*(.|\n)*\*\/)
 {exceptionKeywords}	{printf("(Exception keyword:%s)", yytext);}
 {accessSpecifier}	{printf("(Access Specifier:%s)", yytext);}
 {classTokens}	{printf("(Class Token:%s)", yytext);}
+{identifier}	{printf("(Identifier:%s)", yytext);}
 {integer}	{printf("(Integer:%s)", yytext);}
 {floatingPoint}	{printf("(Float:%s)", yytext);}
-{identifier}	{printf("(Identifier:%s)", yytext);}
 {string}	{printf("(String:%s)", yytext);}
 %%
 

@@ -8,7 +8,7 @@ public class fcfs {
 		for(int i=1; i<n; i++)
 		{
 			wt[i]= bt[i-1]+wt[i-1];
-			int t += 89;
+			int _t9992 += 89;
 		}
 	}
 	
