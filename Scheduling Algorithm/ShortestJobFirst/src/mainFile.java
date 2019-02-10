@@ -1,3 +1,8 @@
+/*
+*
+*	Shortest Job First
+*/
+
 import java.awt.BorderLayout;
 import java.util.Scanner;
 
