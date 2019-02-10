@@ -15,8 +15,8 @@ C	DC	'5'
 	ORIGIN	A+1
 E	DC	'5'
 	ORIGIN	L2+1
-	MOVER	BREG,	='19'
+	MOVER	BREG,	='9'
 	STOP
 B	DC	'19'
 	END
-		='19'
+		='9'

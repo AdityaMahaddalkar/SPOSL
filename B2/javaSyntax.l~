@@ -1,0 +1,20 @@
+%{
+	/* Program to generate tokens in java file */
+	unsigned tokens=0;
+%}
+datatype	int|float|boolean|void|null
+keyword	for|while|if|else|else if|{datatype}
+identifier	[_a-zA-Z]+[_a-zA-Z0-9]*
+operator	\+|-|\*|\\|<|>|<=|>=|!=
+seperator	\,|;
+
+%%
+{token}	{tokens++;}
+%%
+main()
+{
+	extern FILE *yyin;
+	yyin = fopen("my.java", "r");
+	yylex();
+	printf("%d tokens found in file\n");
+}

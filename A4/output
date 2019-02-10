@@ -1,0 +1,13 @@
+	LOAD	a
+	STORE	b
+	LOAD 	p
+	LOAD	a
+	ADD	b
+	LOAD	b
+	STORE	a
+	LOAD	p
+	STORE	x
+	ADD	y
+	SUB	x
+	STORE	y
+	END

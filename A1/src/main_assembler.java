@@ -265,6 +265,7 @@ public class main_assembler {
 				
 				
 			}
+			/*
 			if(words.length == 3 && words[2].matches("='[0-9]*'")){
 				try{
 					int ptr = literals.indexOf(words[2].split("=")[1]);
@@ -274,7 +275,7 @@ public class main_assembler {
 				}
 				
 			}
-		
+			*/
 			
 			// Incrementing the location counter
 			
@@ -297,7 +298,7 @@ public class main_assembler {
 					}
 				}
 			}
-			if(words[1].equalsIgnoreCase("END")) {
+			else if(words[1].equalsIgnoreCase("END")) {
 				int counter = lc;
 				for(int i = 0;i < litAddr.size();i ++) {
 					if(((Integer)litAddr.get(i)).intValue() == -1) {
