@@ -1,0 +1,9 @@
+%token datatype integer float varname access semicolon
+%%
+start: sent start| sent;
+sent: access datatype varname '=' integer semicolon {printf("Valid\n");} |
+	access datatype varname '=' float semicolon {printf("Valid\n");} |
+	datatype varname '=' float semicolon {printf("Valid\n");}	|
+	datatype varname '=' integer semicolon {printf("Valid\n");} ;
+%%
+

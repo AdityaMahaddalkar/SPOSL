@@ -1,0 +1,5 @@
+#define INTDATATYPE 257
+#define FLOATDATATYPE 258
+#define INTEGER 259
+#define FLOAT 260
+#define VARNAME 261
