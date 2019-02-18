@@ -4,7 +4,7 @@
 #include <string.h>
 
 int main(){
-	char *menu = "\n1.ps\n2.fork\n3.join\n4.exec\n5.wait\n>";
+	char *menu = "\n1.ps\n2.fork\n3.exec\n4.wait\n>";
 	printf("%s", menu);
 	int option;
 	scanf("%d", &option);
@@ -17,12 +17,9 @@ int main(){
 			printf("%d\n", getpid());
 			break;
 		case 3:
-		    //TODO: join function
-			break;
-		case 4:
 		    execv("./EXEC", NULL);
 		    break;
-		case 5:
+		case 4:
 		    system("wait");
 		    break;
 			
