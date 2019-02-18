@@ -1,1 +1,1 @@
-#define VARIABLE 257
+#define variable 257

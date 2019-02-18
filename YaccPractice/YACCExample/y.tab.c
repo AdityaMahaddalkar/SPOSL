@@ -56,7 +56,7 @@ typedef int YYSTYPE;
 
 extern int YYPARSE_DECL();
 
-#define VARIABLE 257
+#define variable 257
 #define YYERRCODE 256
 static const short yylhs[] = {                           -1,
     0,    0,
@@ -96,12 +96,12 @@ static const char *yyname[] = {
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"VARIABLE",
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"variable",
 };
 static const char *yyrule[] = {
 "$accept : expression",
 "expression : expression",
-"expression : VARIABLE",
+"expression : variable",
 
 };
 #endif

@@ -5,7 +5,7 @@
 digit	[0-9]
 letter	[a-zA-Z]
 %%
-^{letter}({letter}|{digit})*$	{return VARIABLE;}
+^{letter}({letter}|{digit})*$	{return variable;}
 %%
 int main(){
 	extern FILE *yyin;

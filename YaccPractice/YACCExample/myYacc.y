@@ -2,11 +2,11 @@
 	#include <stdio.h>
 	#include <stdlib.h>
 %}
-%token VARIABLE
+%token variable
 %start expression
 %%
 expression: expression	{yyerror("This is error");}
-	| VARIABLE
+	| variable
 	;
 %%
 void yyerror (char const *s){
