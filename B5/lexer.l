@@ -6,6 +6,7 @@ datatype	(int|float|char|String)
 accessSpecifier	(public|protected|private)
 left_bracket	\(
 right_bracket	\)
+
 id	[a-zA-Z][a-zA-Z0-9]*
 %%
 {datatype}	{return DATATYPE;}
