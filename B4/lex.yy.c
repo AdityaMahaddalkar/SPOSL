@@ -482,7 +482,7 @@ char *yytext;
 #line 1 "scanner.l"
 #line 2 "scanner.l"
 	#include <stdio.h>
-	#include "y.tab.h"
+	#include "scanner.tab.h"
 #line 487 "lex.yy.c"
 
 #define INITIAL 0

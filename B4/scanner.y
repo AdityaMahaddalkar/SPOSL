@@ -3,6 +3,7 @@
 	extern FILE *yyin;
 	void yyerror(const char *s);
 	int yylex();
+	extern char *yytext;
 	int line_no = 0;
 %}
 %token INT STRING FLOAT CHAR ASSIGN STRINGDECL INTDECL FLOATDECL CHARDECL COMMA SEMICOLON ID SPACE
@@ -19,7 +20,7 @@ floatvarlist: floatvarlist COMMA ID ASSIGN FLOAT | floatvarlist COMMA ID ASSIGN 
 charvarlist: charvarlist COMMA ID ASSIGN CHAR | charvarlist COMMA ID | ID | ID ASSIGN CHAR;
 %%
 
-void yyerror(const char *s){printf("error %d\n", line_no++);} 
+void yyerror(const char *s){printf("error %s : %d\n", yytext, line_no++);} 
 int main(){
 	do{
 		yyparse();

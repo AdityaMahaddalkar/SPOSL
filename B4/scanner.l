@@ -1,6 +1,6 @@
 %{
 	#include <stdio.h>
-	#include "y.tab.h"
+	#include "scanner.tab.h"
 %}
 digit	[0-9]
 int	{digit}+

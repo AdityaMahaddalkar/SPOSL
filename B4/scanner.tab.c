@@ -69,10 +69,11 @@
 	extern FILE *yyin;
 	void yyerror(const char *s);
 	int yylex();
+	extern char *yytext;
 	int line_no = 0;
 
 /* Line 371 of yacc.c  */
-#line 76 "scanner.tab.c"
+#line 77 "scanner.tab.c"
 
 # ifndef YY_NULL
 #  if defined __cplusplus && 201103L <= __cplusplus
@@ -153,7 +154,7 @@ int yyparse ();
 /* Copy the second part of user declarations.  */
 
 /* Line 390 of yacc.c  */
-#line 157 "scanner.tab.c"
+#line 158 "scanner.tab.c"
 
 #ifdef short
 # undef short
@@ -452,9 +453,9 @@ static const yytype_int8 yyrhs[] =
 /* YYRLINE[YYN] -- source line where rule number YYN was defined.  */
 static const yytype_uint8 yyrline[] =
 {
-       0,    11,    11,    12,    13,    14,    16,    16,    16,    16,
-      17,    17,    17,    17,    18,    18,    18,    18,    18,    18,
-      19,    19,    19,    19
+       0,    12,    12,    13,    14,    15,    17,    17,    17,    17,
+      18,    18,    18,    18,    19,    19,    19,    19,    19,    19,
+      20,    20,    20,    20
 };
 #endif
 
@@ -1368,31 +1369,31 @@ yyreduce:
     {
         case 2:
 /* Line 1792 of yacc.c  */
-#line 11 "scanner.y"
+#line 12 "scanner.y"
     {printf("Valid\n");}
     break;
 
   case 3:
 /* Line 1792 of yacc.c  */
-#line 12 "scanner.y"
+#line 13 "scanner.y"
     {printf("Valid\n");}
     break;
 
   case 4:
 /* Line 1792 of yacc.c  */
-#line 13 "scanner.y"
+#line 14 "scanner.y"
     {printf("Valid\n");}
     break;
 
   case 5:
 /* Line 1792 of yacc.c  */
-#line 14 "scanner.y"
+#line 15 "scanner.y"
     {printf("Valid\n");}
     break;
 
 
 /* Line 1792 of yacc.c  */
-#line 1396 "scanner.tab.c"
+#line 1397 "scanner.tab.c"
       default: break;
     }
   /* User semantic actions sometimes alter yychar, and that requires
@@ -1624,10 +1625,10 @@ yyreturn:
 
 
 /* Line 2055 of yacc.c  */
-#line 20 "scanner.y"
+#line 21 "scanner.y"
 
 
-void yyerror(const char *s){printf("error %d\n", line_no++);} 
+void yyerror(const char *s){printf("error %s : %d\n", yytext, line_no++);} 
 int main(){
 	do{
 		yyparse();
