@@ -1,0 +1,13 @@
+Run the following two commands to create a shared library :
+gcc -c -Wall -Werror -fPIC add.c
+gcc -c -Wall -Werror -fPIC sub.c
+gcc -shared -o libmymath.so add.o sub.o
+
+
+gcc -L (project-location) -Wall addDemo.c -o main -lshared
+
+
+export LD_LIBRARY_PATH=(project-path):$LD_LIBRARY_PATH
+
+./main
+
